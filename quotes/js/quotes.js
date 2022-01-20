@@ -22,6 +22,14 @@ const quotes = [
     {
         "text": "I don’t talk about these things if I haven’t lived them, and I’ve hurt people in my life. It’s something I still have to think about when I sleep at night. The message I’m sending to myself – I can’t change the world until I change myself first.",
         "name": "Kendrick Lamar Duckworth"
+    },
+    {
+        "text": "Everybody needs a passion. That’s what keeps life interesting. If you live without passion, you can go through life without leaving any footprints.",
+        "name": "Betty White"
+    },
+    {
+        "text": "If it’s flipping hamburgers at McDonald’s, be the best hamburger flipper in the world. Whatever it is you do you have to master your craft.",
+        "name": "Snoop Dogg"
     }
 ]
 

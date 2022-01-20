@@ -24,9 +24,10 @@
     padding-left: 25px;
     padding-right: 25px;
     margin-bottom: 100px;
-    grid-gap: 10px;
     width: 70%;
+    border: 3px solid rgba(255, 255, 255, 0.7);
     display: grid;
+    grid-gap: 10px;
 }
 
 .quote-text {
@@ -51,6 +52,20 @@
 
 .quote-shuffle-btn {
     font-size: 16pt;
+    background-color: #dccbb7;
+    border-radius: 2px;
+    padding: 5px 5px;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    transition-duration: 0.5s;
+}
+
+.quote-shuffle-btn:hover {
+    background-color: #9b8b7b;
+    padding: 8px 8px;
+}
+
+.quote-shuffle-btn:active {
+    background-color: #8b7b6b;
 }
 
 
