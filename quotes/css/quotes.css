@@ -1,0 +1,68 @@
+.main {
+    background-color: #ecdbc7;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.page-title {
+    color: #323232;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.quote-div {
+    background-color: #dccbb7;
+    padding: 25px 25px;
+    grid-gap: 10px;
+    width: 70%;
+    display: grid;
+}
+
+.quote-text {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    justify-self: center;
+    font-size: 36pt;
+}
+
+.quote-name {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: right;
+    font-size: 16pt;
+}
+
+.quote-shuffle-div {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: right;
+}
+
+.quote-shuffle-btn {
+    font-size: 16pt;
+}
+
+
+.bottom-bar {
+    background-image: linear-gradient(#323232, #0b0b0b);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-bar p {
+    color: #efefef;
+    text-align: center;
+    padding: 2px 15px;
+}
