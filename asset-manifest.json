@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/MatthewCS.github.io/static/css/main.073c9b0a.css",
-    "main.js": "/MatthewCS.github.io/static/js/main.eafa387b.js",
-    "static/js/787.797397c4.chunk.js": "/MatthewCS.github.io/static/js/787.797397c4.chunk.js",
-    "index.html": "/MatthewCS.github.io/index.html",
-    "main.073c9b0a.css.map": "/MatthewCS.github.io/static/css/main.073c9b0a.css.map",
-    "main.eafa387b.js.map": "/MatthewCS.github.io/static/js/main.eafa387b.js.map",
-    "787.797397c4.chunk.js.map": "/MatthewCS.github.io/static/js/787.797397c4.chunk.js.map"
+    "main.css": "/static/css/main.ca57846c.css",
+    "main.js": "/static/js/main.a35fc410.js",
+    "index.html": "/index.html",
+    "main.ca57846c.css.map": "/static/css/main.ca57846c.css.map",
+    "main.a35fc410.js.map": "/static/js/main.a35fc410.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.eafa387b.js"
+    "static/css/main.ca57846c.css",
+    "static/js/main.a35fc410.js"
   ]
 }
