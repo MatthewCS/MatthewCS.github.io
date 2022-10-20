@@ -3,13 +3,18 @@ import { Theme, Select } from "theme-ui";
 
 export type ThemeTogglerProps = {
   themes: { themeName: string; theme: Theme }[];
-  defaultTheme: string;
+  defaultThemeIndex: number;
   onChangeEvent: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
 export function ThemeToggler(props: ThemeTogglerProps) {
   return (
-    <Select defaultValue={props.defaultTheme} onChange={props.onChangeEvent}>
+    <Select
+      name="themeSelector"
+      id="themeSelector"
+      defaultValue={props.defaultThemeIndex}
+      onChange={props.onChangeEvent}
+    >
       {props.themes.map((theme, index) => {
         return (
           <option key={theme.themeName} value={index}>

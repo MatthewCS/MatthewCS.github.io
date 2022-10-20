@@ -4,29 +4,51 @@ import { Theme, ThemeProvider, Flex, Box } from "theme-ui";
 import { darkTheme, deepTheme, robotoTheme } from "../themes";
 import { ThemeToggler } from "../components/themeToggler";
 
-type FrontPageProps = {
-  theme?: { themeName?: string; theme?: Theme };
-};
+type FrontPageProps = {};
 type FrontPageState = {
-  allThemes: { themeName: string; theme: Theme }[];
   currentThemeName: string;
+  currentThemeIndex: number;
   currentTheme: Theme;
 };
+
+const ALL_THEMES: { themeName: string; theme: Theme }[] = [
+  { themeName: "dark", theme: darkTheme },
+  { themeName: "deep", theme: deepTheme },
+  { themeName: "roboto", theme: robotoTheme },
+];
 
 class FrontPage extends React.Component<FrontPageProps, FrontPageState> {
   constructor(props: FrontPageProps) {
     super(props);
 
+    let initialThemeName: string;
+    let initialThemeIndex: number;
+    let initialTheme: Theme;
+
+    // Do we have a theme cached?
+    try {
+      const indexStr = window.sessionStorage.getItem("current-theme-index");
+      if (indexStr) {
+        initialThemeIndex = +indexStr;
+
+        if (
+          isNaN(initialThemeIndex) ||
+          initialThemeIndex < 0 ||
+          initialThemeIndex >= ALL_THEMES.length
+        )
+          initialThemeIndex = 1; // deep
+      } else initialThemeIndex = 1; // deep
+    } catch (err) {
+      initialThemeIndex = 1; // deep
+    }
+
+    initialThemeName = ALL_THEMES[initialThemeIndex].themeName;
+    initialTheme = ALL_THEMES[initialThemeIndex].theme;
+
     this.state = {
-      allThemes: [
-        { themeName: "dark", theme: darkTheme },
-        { themeName: "deep", theme: deepTheme },
-        { themeName: "roboto", theme: robotoTheme },
-      ],
-      currentThemeName:
-        props.theme && props.theme.themeName ? props.theme.themeName : "dark",
-      currentTheme:
-        props.theme && props.theme.theme ? props.theme.theme : darkTheme,
+      currentThemeName: initialThemeName,
+      currentThemeIndex: initialThemeIndex,
+      currentTheme: initialTheme,
     };
 
     this.changeTheme = this.changeTheme.bind(this);
@@ -34,14 +56,23 @@ class FrontPage extends React.Component<FrontPageProps, FrontPageState> {
 
   changeTheme(event: React.ChangeEvent<HTMLSelectElement>) {
     const index = +event.target.value;
-    if (isNaN(index) || index < 0 || index >= this.state.allThemes.length)
-      return;
+    if (isNaN(index) || index < 0 || index >= ALL_THEMES.length) return;
 
-    const newTheme = this.state.allThemes[index];
+    const newTheme = ALL_THEMES[index];
     this.setState({
       currentThemeName: newTheme.themeName,
+      currentThemeIndex: index,
       currentTheme: newTheme.theme,
     });
+
+    // Cache the selected theme
+    try {
+      window.sessionStorage.setItem("current-theme-index", index.toString());
+    } catch (err) {
+      // If we fail to cache the theme, it isn't that big of an issue.
+      // Just log it and continue on
+      console.error(`Error when saving theme to session storage: ${err}`);
+    }
   }
 
   render() {
@@ -65,7 +96,7 @@ class FrontPage extends React.Component<FrontPageProps, FrontPageState> {
                   { themeName: "deep", theme: deepTheme },
                   { themeName: "roboto", theme: robotoTheme },
                 ]}
-                defaultTheme={this.state.currentThemeName}
+                defaultThemeIndex={this.state.currentThemeIndex}
                 onChangeEvent={this.changeTheme}
               />
             </Box>
