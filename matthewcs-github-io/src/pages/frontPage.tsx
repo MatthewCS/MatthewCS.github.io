@@ -1,27 +1,25 @@
 /** @jsxImportSource theme-ui */
 import React from "react";
-import { Theme, ThemeProvider, Flex, Box } from "theme-ui";
+import { Theme, ThemeProvider } from "theme-ui";
 import { darkTheme, deepTheme, robotoTheme } from "../themes";
-import { ThemeToggler } from "../components/themeToggler";
+import { Header } from "../components/header";
 
 type FrontPageProps = {};
 type FrontPageState = {
-  currentThemeName: string;
   currentThemeIndex: number;
   currentTheme: Theme;
 };
 
 const ALL_THEMES: { themeName: string; theme: Theme }[] = [
-  { themeName: "dark", theme: darkTheme },
-  { themeName: "deep", theme: deepTheme },
-  { themeName: "roboto", theme: robotoTheme },
+  { themeName: "Dark", theme: darkTheme },
+  { themeName: "Deep", theme: deepTheme },
+  { themeName: "Roboto", theme: robotoTheme },
 ];
 
 class FrontPage extends React.Component<FrontPageProps, FrontPageState> {
   constructor(props: FrontPageProps) {
     super(props);
 
-    let initialThemeName: string;
     let initialThemeIndex: number;
     let initialTheme: Theme;
 
@@ -42,11 +40,9 @@ class FrontPage extends React.Component<FrontPageProps, FrontPageState> {
       initialThemeIndex = 1; // deep
     }
 
-    initialThemeName = ALL_THEMES[initialThemeIndex].themeName;
     initialTheme = ALL_THEMES[initialThemeIndex].theme;
 
     this.state = {
-      currentThemeName: initialThemeName,
       currentThemeIndex: initialThemeIndex,
       currentTheme: initialTheme,
     };
@@ -60,7 +56,6 @@ class FrontPage extends React.Component<FrontPageProps, FrontPageState> {
 
     const newTheme = ALL_THEMES[index];
     this.setState({
-      currentThemeName: newTheme.themeName,
       currentThemeIndex: index,
       currentTheme: newTheme.theme,
     });
@@ -77,33 +72,25 @@ class FrontPage extends React.Component<FrontPageProps, FrontPageState> {
 
   render() {
     return (
-      <ThemeProvider theme={this.state.currentTheme}>
-        <div
-          sx={{
-            "*": {
-              transition: "all 1s ease-out",
-            },
-          }}
-        >
-          <Flex>
-            <Box p={2}>
-              <h1>PLACEHOLDER</h1>
-            </Box>
-            <Box p={2}>
-              <ThemeToggler
-                themes={[
-                  { themeName: "dark", theme: darkTheme },
-                  { themeName: "deep", theme: deepTheme },
-                  { themeName: "roboto", theme: robotoTheme },
-                ]}
-                defaultThemeIndex={this.state.currentThemeIndex}
-                onChangeEvent={this.changeTheme}
-              />
-            </Box>
-          </Flex>
+      <div
+        sx={{
+          "*": {
+            transition: "all .3s ease-out",
+          },
+        }}
+      >
+        <ThemeProvider theme={this.state.currentTheme}>
+          <Header
+            text={"Matthew Sprague"}
+            themeToggler={{
+              themes: ALL_THEMES,
+              defaultThemeIndex: this.state.currentThemeIndex,
+              onChangeEvent: this.changeTheme,
+            }}
+          />
           <p>This page is a placeholder. Expect more soon!</p>
-        </div>
-      </ThemeProvider>
+        </ThemeProvider>
+      </div>
     );
   }
 }
