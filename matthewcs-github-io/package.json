@@ -13,6 +13,7 @@
     "@theme-ui/color": "^0.15.3",
     "@theme-ui/mdx": "^0.15.3",
     "@types/jest": "^27.5.2",
+    "@types/mdx": "^2.0.3",
     "@types/node": "^16.11.68",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",

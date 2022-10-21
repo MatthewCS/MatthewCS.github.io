@@ -1,9 +1,10 @@
 /** @jsxImportSource theme-ui */
 import React from "react";
 import { Theme, ThemeProvider } from "theme-ui";
-import { MDXProvider } from "@mdx-js/react";
+import { MDXComponents } from "mdx/types";
 import { darkTheme, deepTheme, robotoTheme } from "../themes";
 import { Header } from "../components/header";
+import { Markdown } from "../components/markdown";
 import AboutMe from "./contents/about-me.mdx";
 
 type FrontPageProps = {};
@@ -90,18 +91,9 @@ class FrontPage extends React.Component<FrontPageProps, FrontPageState> {
               onChangeEvent: this.changeTheme,
             }}
           />
-          <div
-            sx={{
-              ml: "8%",
-              pl: "2%",
-              mr: "35%",
-              borderLeft: "solid",
-            }}
-          >
-            <MDXProvider>
-              <AboutMe />
-            </MDXProvider>
-          </div>
+          <Markdown>
+            <AboutMe />
+          </Markdown>
         </ThemeProvider>
       </div>
     );
