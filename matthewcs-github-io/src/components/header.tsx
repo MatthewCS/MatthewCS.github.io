@@ -16,6 +16,7 @@ export function Header(props: HeaderProps) {
         "*": {
           transition: "all 0.3s ease",
         },
+        background: "background",
         backgroundImage: (t) => `
               linear-gradient(
                 to right,
@@ -25,6 +26,8 @@ export function Header(props: HeaderProps) {
               `,
         alignItems: "center",
         borderBottom: (t) => `solid 10pt ${alpha("muted", 0.3)(t)}`,
+        position: "sticky",
+        top: 0,
       }}
     >
       <Box

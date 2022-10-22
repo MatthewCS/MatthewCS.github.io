@@ -1,11 +1,11 @@
 /** @jsxImportSource theme-ui */
 import React from "react";
 import { Theme, ThemeProvider } from "theme-ui";
-import { MDXComponents } from "mdx/types";
 import { darkTheme, deepTheme, robotoTheme } from "../themes";
 import { Header } from "../components/header";
 import { Markdown } from "../components/markdown";
 import AboutMe from "./contents/about-me.mdx";
+import Skills from "./contents/skills.mdx";
 
 type FrontPageProps = {};
 type FrontPageState = {
@@ -93,6 +93,7 @@ class FrontPage extends React.Component<FrontPageProps, FrontPageState> {
           />
           <Markdown>
             <AboutMe />
+            <Skills />
           </Markdown>
         </ThemeProvider>
       </div>
