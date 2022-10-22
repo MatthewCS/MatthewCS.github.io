@@ -17,14 +17,14 @@ export function Markdown(props: MarkdownProps) {
   return (
     <div
       sx={{
-        ml: "8%",
-        pl: "2%",
-        mr: "35%",
-        borderLeft: "solid",
+        ml: ["3%", "8%", "13%", "18%"],
+        mr: ["5%", "10%", "15%", "20%"],
       }}
     >
       <MDXProvider components={componentsWithStyles}>
-        {props.children}
+        {React.Children.map(props.children, (child) => {
+          return <div sx={{ pl: ["2%"], borderLeft: "solid" }}>{child}</div>;
+        })}
       </MDXProvider>
     </div>
   );
