@@ -24,6 +24,7 @@ export function SkillCard(props: SkillCardProps) {
       <Flex
         sx={{
           flexFlow: "column",
+          textAlign: "center",
           justifyContent: "center",
           alignItems: "center",
         }}
@@ -35,9 +36,11 @@ export function SkillCard(props: SkillCardProps) {
           <a href={props.href}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="100%"
               sx={{
-                padding: "5%",
+                margin: "10%",
+                maxHeight: "80%",
+                maxWidth: "80%",
+                aspectRatio: "1 / 1",
               }}
             >
               <image xlinkHref={props.vectorUrl} width="100%" height="100%" />
