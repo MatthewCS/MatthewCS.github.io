@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Icons"
+   viewBox="0 0 192 192"
+   version="1.1"
+   sodipodi:docname="plsql-logo.svg"
+   width="192"
+   height="192"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview103"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="2.8888889"
+     inkscape:cx="95.711538"
+     inkscape:cy="95.884615"
+     inkscape:window-width="2560"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Icons" />
+  <defs
+     id="defs77">
+    <style
+       id="style75">.cls-1{fill:#b9ced9;}.cls-2{fill:#a1bdcc;}.cls-3{fill:#8aadbf;}.cls-4{fill:#789eb2;}.cls-5{fill:none;}.cls-6{fill:#f80000;}.cls-7{fill:#fff;}</style>
+  </defs>
+  <title
+     id="title79">Campaign_Oracle-Database-Appliance-Campaign_Detailed</title>
+  <path
+     class="cls-1"
+     d="m 52.5,18.100002 c -29,0 -52.5,-4.052 -52.5,-9.0510001 V 106.81 c 0,5 23.5,9.052 52.5,9.052 29,0 52.5,-4.053 52.5,-9.052 V 9.0520019 c 0,4.9990001 -23.5,9.0480001 -52.5,9.0480001 z"
+     id="path81" />
+  <path
+     class="cls-2"
+     d="M 0,9.0520019 V 106.81 c 0,5 23.5,9.052 52.5,9.052 V 18.100002 c -28.995,0 -52.5,-4.049 -52.5,-9.0480001 z"
+     id="path83" />
+  <path
+     class="cls-2"
+     d="M 97.759,13.642002 V 111.4 c 4.6,-1.345 7.241,-2.914 7.241,-4.589 V 9.0520019 c 0,1.6750001 -2.64,3.2480001 -7.241,4.5900001 z"
+     id="path85" />
+  <ellipse
+     class="cls-3"
+     cx="52.5"
+     cy="9.052"
+     rx="52.5"
+     ry="9.052"
+     id="ellipse87" />
+  <path
+     class="cls-4"
+     d="m 0,70.600002 c 0,5 23.5,9.052 52.5,9.052 29,0 52.5,-4.052 52.5,-9.052 v 7.242 c 0,5 -23.5,9.052 -52.5,9.052 -29,0 -52.5,-4.05 -52.5,-9.049 z"
+     id="path89" />
+  <path
+     class="cls-4"
+     d="m 105,38.017002 c 0,5 -23.5,9.052 -52.5,9.052 -29,0 -52.5,-4.053 -52.5,-9.052 v 7.242 c 0,5 23.5,9.051 52.5,9.051 29,0 52.5,-4.052 52.5,-9.051 z"
+     id="path91" />
+  <g
+     id="db-logobox"
+     transform="translate(-48,-47.999998)">
+    <rect
+       class="cls-6"
+       x="114"
+       y="114"
+       width="126"
+       height="126"
+       rx="12"
+       ry="12"
+       id="rect95" />
+  </g>
+  <path
+     class="cls-7"
+     d="m 98.343,104.984 h 18.087 c 9.176,0 12.767,5.586 12.767,14.365 0,5.452 -1.595,14.1 -13.365,14.1 h -7.448 V 153 H 98.343 Z m 10.041,21.08 h 5.586 c 2.992,0 5.053,-3.258 5.053,-6.45 0,-3.924 -1.063,-7.248 -5.585,-7.248 h -5.054 z"
+     id="path98" />
+  <path
+     class="cls-7"
+     d="m 135.981,153 v -48.016 h 10.041 v 40.033 h 15.029 V 153 Z"
+     id="path100" />
+  <metadata
+     id="metadata263">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Campaign_Oracle-Database-Appliance-Campaign_Detailed</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
