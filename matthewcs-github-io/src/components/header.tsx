@@ -28,6 +28,7 @@ export function Header(props: HeaderProps) {
         borderBottom: (t) => `solid 10pt ${alpha("muted", 0.3)(t)}`,
         position: "sticky",
         top: 0,
+        zIndex: 1,
       }}
     >
       <Box
