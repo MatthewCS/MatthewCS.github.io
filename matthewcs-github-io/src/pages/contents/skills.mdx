@@ -1,12 +1,13 @@
 import {CardGrid} from "../../components/cardGrid";
 import {SkillCard} from "../../components/skillCard";
+import CollapsibleContent from "../../components/collapsibleContent";
 
-# Skills
+<CollapsibleContent text="Skills">
 
 Here's an incomplete list of languages, frameworks, databases, and tools
 I've worked with before.
 
-## Languages
+<CollapsibleContent text="Languages" headingSize="h2">
 
 <CardGrid>
 <SkillCard
@@ -47,7 +48,9 @@ I've worked with before.
 />
 </CardGrid>
 
-## Frameworks
+</CollapsibleContent>
+
+<CollapsibleContent text="Frameworks" headingSize="h2">
 
 <CardGrid>
 <SkillCard
@@ -100,7 +103,9 @@ I've worked with before.
 />
 </CardGrid>
 
-## Databases
+</CollapsibleContent>
+
+<CollapsibleContent text="Databases" headingSize="h2">
 
 <CardGrid>
 <SkillCard
@@ -135,7 +140,9 @@ I've worked with before.
 />
 </CardGrid>
 
-## Tools & Platforms
+</CollapsibleContent>
+
+<CollapsibleContent text="Tools & Platforms" headingSize="h2">
 
 <CardGrid>
 <SkillCard
@@ -181,3 +188,7 @@ I've worked with before.
   text="Postman"
 />
 </CardGrid>
+
+</CollapsibleContent>
+
+</CollapsibleContent>

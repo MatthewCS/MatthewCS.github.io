@@ -95,7 +95,6 @@ class FrontPage extends React.Component<FrontPageProps, FrontPageState> {
             <AboutMe />
             <Skills />
           </Markdown>
-          <div sx={{ padding: "25pt" }}></div>
         </ThemeProvider>
       </div>
     );
