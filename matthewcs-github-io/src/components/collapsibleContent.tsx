@@ -87,7 +87,6 @@ class CollapsibleContent extends React.Component<
     }
     `;
     const collapseAnimation = `${collapseKeyframes} 0.5s ease-in-out 1 forwards`;
-    console.log(collapseAnimation);
 
     return (
       <>
