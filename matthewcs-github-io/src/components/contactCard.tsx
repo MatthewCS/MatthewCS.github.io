@@ -4,27 +4,26 @@ import { Card, Flex, Box, Text } from "theme-ui";
 import { alpha } from "@theme-ui/color";
 import BoxResizeOnHover from "./boxResizeOnHover";
 
-export type SkillCardProps = {
+export type ContactCardProps = {
   vectorUrl: string;
   text: string;
   cardWidth: string;
   href: string;
 };
 
-export function SkillCard(props: SkillCardProps) {
+export function ContactCard(props: ContactCardProps) {
   return (
     <Card
-      mb={0.9}
       sx={{
         width: props.cardWidth,
         boxShadow: (t) => `0 10pt 1pt ${alpha("muted", 0.95)(t)}`,
         border: "solid",
-        borderColor: (t) => alpha("secondary", 0.5)(t),
+        borderColor: (t) => alpha("primary", 0.5)(t),
       }}
     >
       <Flex
         sx={{
-          flexFlow: "column",
+          flexFlow: "row",
           textAlign: "center",
           justifyContent: "center",
           alignItems: "center",

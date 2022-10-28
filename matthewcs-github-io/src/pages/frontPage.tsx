@@ -6,6 +6,7 @@ import { Header } from "../components/header";
 import { Markdown } from "../components/markdown";
 import AboutMe from "./contents/about-me.mdx";
 import Skills from "./contents/skills.mdx";
+import ContactMe from "./contents/contact-me.mdx";
 
 type FrontPageProps = {};
 type FrontPageState = {
@@ -94,6 +95,7 @@ class FrontPage extends React.Component<FrontPageProps, FrontPageState> {
           <Markdown>
             <AboutMe />
             <Skills />
+            <ContactMe />
           </Markdown>
         </ThemeProvider>
       </div>
