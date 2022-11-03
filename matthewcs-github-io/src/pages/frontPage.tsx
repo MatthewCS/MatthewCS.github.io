@@ -2,6 +2,7 @@
 import React from "react";
 import { Theme, ThemeProvider } from "theme-ui";
 import { darkTheme, deepTheme, robotoTheme } from "../themes";
+import Background from "../components/background";
 import { Header } from "../components/header";
 import { Markdown } from "../components/markdown";
 import AboutMe from "./contents/about-me.mdx";
@@ -84,6 +85,7 @@ class FrontPage extends React.Component<FrontPageProps, FrontPageState> {
         }}
       >
         <ThemeProvider theme={this.state.currentTheme}>
+          <Background />
           <Header
             text={"Matthew Sprague"}
             themeToggler={{

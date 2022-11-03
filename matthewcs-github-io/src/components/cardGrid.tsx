@@ -14,6 +14,9 @@ export function CardGrid(props: CardGridProps) {
         width={props.width ?? ["40%", "30%"]}
         columns={props.columns ?? [2, 3]}
         gap={3}
+        pl="2%"
+        pr="2%"
+        pb="5%"
       >
         {props.children}
       </Grid>
