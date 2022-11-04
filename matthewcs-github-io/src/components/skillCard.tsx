@@ -49,7 +49,9 @@ export function SkillCard(props: SkillCardProps) {
           </a>
         </BoxResizeOnHover>
         <Box sx={{ paddingBottom: "2%" }}>
-          <Text sx={{ fontSize: 4 }}>{props.text}</Text>
+          <a href={props.href} sx={{ textDecoration: "none", color: "text" }}>
+            <Text sx={{ fontSize: 4 }}>{props.text}</Text>
+          </a>
         </Box>
       </Flex>
     </Card>
