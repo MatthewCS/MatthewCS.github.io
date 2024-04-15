@@ -141,6 +141,8 @@ class CollapsibleContent extends React.Component<
         <Box
           sx={{
             mb: "5%",
+            mr: "2%",
+            pb: "1pt",
             overflow: this.state.isOpen ? "visible" : "hidden",
             animation: collapseAnimation,
             maxHeight: this.state.contentHeight,
